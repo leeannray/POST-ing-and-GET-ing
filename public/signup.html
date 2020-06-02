@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Career Resources & Wiki</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.3.7/dist/js/uikit-icons.min.js"></script>
+
+  <!-- Ajax and jQuery CDNS -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- My JS file -->
+  <!-- <script src="./public/js/logic.js"></script> -->
+
+  <!-- link to our style sheet -->
+  <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="uk-position-fixed uk-width-expand">
+    <!-- Nav bar -->
+    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar="mode: click">
+      <!-- Logo -->
+      <div class="uk-navbar-left">
+        <a class="logo-text uk-navbar-item uk-logo" href="/">Career Resources <span class="blueAnd">&</span> Wiki</a>
+      </div>
+      <!-- Menu -->
+      <div class="uk-navbar-right">
+        <!-- Menu for desktop size screens -->
+        <ul class="desktopMenu-toggle uk-navbar-nav">
+          <li><a class="nav-link" href="/resources">Resources</a></li>
+          <li><a class="nav-link" href="/bookSearch">Book Search</a></li>
+          <div class="uk-navbar-item">
+            <a href="/login"><button class="uk-button uk-button-default" id="login">Log in</button></a>
+          </div>
+        </ul>
+        <!-- Menu for mobile size screens -->
+        <ul class="mobileMenu-toggle uk-navbar-nav">
+          <li class="mobile-menu">
+            <div class="menu-icon uk-flex uk-flex-center" uk-icon="icon: menu"></div>
+            <div class="uk-navbar-dropdown">
+              <ul class="uk-nav uk-navbar-dropdown-nav">
+                <li><a href="/resources">Resources</a></li>
+                <li><a href="/bookSearch">Book Search</a></li>
+                <li class="uk-nav-divider"></li>
+                <li><a class="logoutLink" href="/login">Log in</a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Signup form -->
+  <div class="container loginForm">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Sign Up Form</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="email-input">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="password-input">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="fieldsSelect">Field</label>
+            <!-- Render data from a get request to the /fields endpoint -->
+            <select id="fieldsSelect" class="uk-select">
+              <option>Select an field</option>
+            </select>
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="uk-button uk-button-primary">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a class="loginLink" href="/login">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+
+</body>
+
+</html>
